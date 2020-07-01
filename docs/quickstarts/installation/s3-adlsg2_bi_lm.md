@@ -5,7 +5,7 @@ sidebar_label: AWS S3 & ADLS Gen2 with LiveMigrator
 ---
 
 Use this quickstart if you want to configure Fusion to migrate data from an AWS S3 bucket to an ADLS Gen2 container, or vice versa, using WANdisco LiveMigrator. 
-The set up is the same for either scenario, just chose the direction when starting your migration.
+The set up is the same for either scenario, just choose the direction when starting your migration.
 
 What this guide will cover:
 

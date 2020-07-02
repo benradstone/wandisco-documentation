@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.58">
 <link rel="search" type="application/opensearchdescription+xml" title="WANdisco docs" href="/wandisco-documentation/opensearch.xml"><title data-react-helmet="true">Replication Rules | WANdisco docs</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Replication Rules | WANdisco docs"><meta data-react-helmet="true" name="description" content="Overview"><meta data-react-helmet="true" property="og:description" content="Overview"><meta data-react-helmet="true" property="og:url" content="https://wandisco.github.io/wandisco-documentation//wandisco-documentation/docs/why-fusion/concepts_replication_rules"><link data-react-helmet="true" rel="shortcut icon" href="/wandisco-documentation/img/favicon.png"><link data-react-helmet="true" rel="canonical" href="https://wandisco.github.io/wandisco-documentation//wandisco-documentation/docs/why-fusion/concepts_replication_rules"><link rel="stylesheet" href="/wandisco-documentation/styles.a9227a34.css">
-<link rel="preload" href="/wandisco-documentation/styles.6c749758.js" as="script">
-<link rel="preload" href="/wandisco-documentation/runtime~main.767187cd.js" as="script">
-<link rel="preload" href="/wandisco-documentation/main.e36f0c56.js" as="script">
-<link rel="preload" href="/wandisco-documentation/1.2d25f03f.js" as="script">
-<link rel="preload" href="/wandisco-documentation/2.b83af041.js" as="script">
-<link rel="preload" href="/wandisco-documentation/3.73e74ddd.js" as="script">
-<link rel="preload" href="/wandisco-documentation/1be78505.a01211c2.js" as="script">
-<link rel="preload" href="/wandisco-documentation/113.cffd459e.js" as="script">
-<link rel="preload" href="/wandisco-documentation/ae4b7282.81cbb644.js" as="script">
-<link rel="preload" href="/wandisco-documentation/17896441.acb2b8c3.js" as="script">
-<link rel="preload" href="/wandisco-documentation/e1346396.0f8bc8d4.js" as="script">
+<link rel="preload" href="/wandisco-documentation/styles.d634f785.js" as="script">
+<link rel="preload" href="/wandisco-documentation/runtime~main.33da07a8.js" as="script">
+<link rel="preload" href="/wandisco-documentation/main.36f1a059.js" as="script">
+<link rel="preload" href="/wandisco-documentation/1.00f6cf26.js" as="script">
+<link rel="preload" href="/wandisco-documentation/2.780d9c70.js" as="script">
+<link rel="preload" href="/wandisco-documentation/3.5dd9f744.js" as="script">
+<link rel="preload" href="/wandisco-documentation/1be78505.d7dfa493.js" as="script">
+<link rel="preload" href="/wandisco-documentation/114.230f0082.js" as="script">
+<link rel="preload" href="/wandisco-documentation/ae4b7282.5f0b30b0.js" as="script">
+<link rel="preload" href="/wandisco-documentation/17896441.f8d8cbaf.js" as="script">
+<link rel="preload" href="/wandisco-documentation/e1346396.1508f250.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -25,16 +25,16 @@ You can replicate or migrate HCFS data, and if using the Fusion Plugin for Live 
 <code>/repl2/dir_2</code><br>
 <code>/repl2/dir_3/datadir_a</code><br>
 <code>/repl2/dir_3/datadir_b</code></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/wandisco-documentation/docs/why-fusion/core_platform_and_dcone"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Core Platform &amp; DConE</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/wandisco-documentation/docs/why-fusion/concepts_consistency_checks"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Consistency Checks »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link">Overview</a></li><li><a href="#replication-strategy" class="table-of-contents__link">Replication strategy</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/wandisco-documentation/docs/quickstarts/installation/quickstart-config">Getting Started</a></li><li class="footer__item"><a href="https://docs.wandisco.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Product User Guides</a></li><li class="footer__item"><a href="https://community.wandisco.com/s/knowledge-base" target="_blank" rel="noopener noreferrer" class="footer__link-item">Knowledge Base</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://community.wandisco.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">WANdisco Community</a></li><li class="footer__item"><a href="//wandisco.com/partners" target="_blank" rel="noopener noreferrer" class="footer__link-item">Partners</a></li><li class="footer__item"><a href="//twitter.com/WANdisco" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/wandisco-documentation/docs/help/need_help">Help</a></li><li class="footer__item"><a href="https://wandisco.com/blog" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li><li class="footer__item"><a href="https://blogs.wandisco.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Developer Blog</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 WANdisco, Inc.</div></div></div></footer></div>
-<script src="/wandisco-documentation/styles.6c749758.js"></script>
-<script src="/wandisco-documentation/runtime~main.767187cd.js"></script>
-<script src="/wandisco-documentation/main.e36f0c56.js"></script>
-<script src="/wandisco-documentation/1.2d25f03f.js"></script>
-<script src="/wandisco-documentation/2.b83af041.js"></script>
-<script src="/wandisco-documentation/3.73e74ddd.js"></script>
-<script src="/wandisco-documentation/1be78505.a01211c2.js"></script>
-<script src="/wandisco-documentation/113.cffd459e.js"></script>
-<script src="/wandisco-documentation/ae4b7282.81cbb644.js"></script>
-<script src="/wandisco-documentation/17896441.acb2b8c3.js"></script>
-<script src="/wandisco-documentation/e1346396.0f8bc8d4.js"></script>
+<script src="/wandisco-documentation/styles.d634f785.js"></script>
+<script src="/wandisco-documentation/runtime~main.33da07a8.js"></script>
+<script src="/wandisco-documentation/main.36f1a059.js"></script>
+<script src="/wandisco-documentation/1.00f6cf26.js"></script>
+<script src="/wandisco-documentation/2.780d9c70.js"></script>
+<script src="/wandisco-documentation/3.5dd9f744.js"></script>
+<script src="/wandisco-documentation/1be78505.d7dfa493.js"></script>
+<script src="/wandisco-documentation/114.230f0082.js"></script>
+<script src="/wandisco-documentation/ae4b7282.5f0b30b0.js"></script>
+<script src="/wandisco-documentation/17896441.f8d8cbaf.js"></script>
+<script src="/wandisco-documentation/e1346396.1508f250.js"></script>
 </body>
 </html>

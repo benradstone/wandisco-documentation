@@ -1,25 +1,29 @@
 ---
-id: cdh-adlsg2
-title: Cloudera (CDH) to ADLS Gen2
-sidebar_label: Cloudera (CDH) to ADLS Gen2
+id: hdp_sandbox_adlsg2
+title: Hortonworks (HDP) Sandbox to ADLS Gen2
+sidebar_label: HDP Sandbox to ADLS Gen2
 ---
 
-Use this quickstart if you want to configure Fusion to replicate from a non-kerberized Cloudera (CDH) cluster to an ADLS Gen2 container.
+Use this quickstart to configure Fusion to replicate from a non-kerberized Hortonworks (HDP) Sandbox to an ADLS Gen2 container.
 
 What this guide will cover:
 
-- Installing WANdisco Fusion using the [docker-compose](https://docs.docker.com/compose/) tool.
-- Integrating WANdisco Fusion with the CDH cluster and ADLS Gen2 storage.
+- Installing WANdisco Fusion and a HDP Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
+- Integrating WANdisco Fusion with ADLS Gen2 storage.
+
+If you would like to try something different with the HDP Sandbox, see:
+
+* [HDP Sandbox to Azure Databricks](./hdp_sandbox_lhv_client-adlsg2_lan.md)
+* [HDP Sandbox to S3](./hdp_sandbox-s3.md)
 
 ## Prerequisites
 
-|For info on how to create a suitable VM with all services installed, see our [Azure VM creation](../preparation/azure_vm_creation.md) guide. See our [VM Preparation](../preparation/vm_prep.md) guide for how to install the services only.|
-|---|
+:::info
+For more information about to create a suitable VM with all services installed, see our [Azure VM creation](../preparation/azure_vm_creation.md) guide. See our [VM Preparation](../preparation/vm_prep.md) guide for how to install the services only.|
+:::
 
 To complete this install, you will need:
 
-* CDH cluster.
-  * The [HDFS superuser](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) must be `hdfs` for the purposes of this quickstart.
 * ADLS Gen2 storage account with [hierarchical namespace](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-namespace) enabled.
   * You will also need a container created inside this account.
 * Azure Virtual Machine (VM).
@@ -33,8 +37,6 @@ To complete this install, you will need:
   * [Docker Compose for Linux](https://docs.docker.com/compose/install/#install-compose) (v1.25.0 or higher)
 
 ### Info you will require
-
-* Administrator credentials for your Cloudera manager.
 
 * ADLS Gen2 storage account details:
 
@@ -62,29 +64,17 @@ Log in to your VM prior to starting these steps.
 
    `./setup-env.sh`
 
-1. Choose the `Custom deployment` option when prompted.
+1. Choose the `HDP Sandbox to custom distribution` option when prompted.
 
-1. Enter the zone details:
-
-   * First zone type = `cdh`
-   * First zone name = _press enter for the default value_
+1. Enter the second zone details:
 
    * Second zone type = `adls2`
    * Second zone name = _press enter for the default value_
 
-1. Enter your docker hostname, which will be the VM hostname.
-
-   _Example:_  `docker_host01.realm.com`
-
-1. Enter the CDH zone details:
+1. Enter the HDP Sandbox zone details:
 
    _Examples:_
 
-   * CDH version = `5.16.0`
-     * All minor versions are supported within each version listed (e.g. choose `5.16.0` if you are using `5.16.1`).
-   * Active NameNode hostname = `namenode.example.com`
-   * Active NameNode port = `8020`
-   * NameNode nameservice = `nameservice01`
    * Plugins = `NONE`
 
 1. Enter the ADLS Gen2 zone details:
@@ -95,7 +85,7 @@ Log in to your VM prior to starting these steps.
      * This is required even if you are not intending to use a HDI cluster.
    * Plugins = `NONE`
 
-1. You have now completed the setup. To create and start your containers run:
+1. You have now completed the setup, to create and start your containers run:
 
    `docker-compose up -d`
 
@@ -103,27 +93,57 @@ Log in to your VM prior to starting these steps.
 
 ## Configuration
 
+### Check HDP services are started
+
+The HDP sandbox services can take up to 5-10 minutes to start. To check that the HDFS service is started:
+
+1. Log in to Ambari via a web browser.
+
+   `http://<dockerhost_IP_address>:8080`
+
+   Username: `admin`
+   Password: `admin`
+
+1. Select the **HDFS** service.
+
+1. Wait until all the HDFS components are showing as **Started**.
+
 ### Configure the ADLS Gen2 storage
 
-1. Log in to Fusion via a web browser.
+1. Log in to the UI via a web browser.
 
-   `http://<docker_IP_address>:8081`
+   `http://<dockerhost_IP_address>:8081`
 
    Enter your email address and choose a password you will remember.
 
 1. Click on the **Settings** cog for the **ADLS GEN2** storage, and fill in the details for your ADLS Gen2 storage account. See the [Info you will require](#info-you-will-require) section for reference.
 
-
 1. Check the **Use Secure Protocol** box.
 
 1. Click **Apply Configuration** and wait for this to complete.
 
-## Migration
+## Next steps
 
-You can now create a [replication rule](../operation/create-rule.md) and then [migrate your data](../operation/migration.md).
+### Migration
+
+Follow our [HDP Sandbox LiveMigrator testing guide](../testing/test-hdp-sandbox-livemigrator.md) to perform a sample data migration.
+
+### Replication
+
+Follow our [HDP Sandbox LiveData testing guide](../testing/test-hdp-sandbox-livedata.md) to perform live replication of data.
 
 ## Troubleshooting
 
+* If you are unable to access the Ambari or Fusion UI, you may need admin assistance with your network configuration. See our [Azure specific troubleshooting](../troubleshooting/general_troubleshooting.md#unable-to-access-ambari-cloudera-or-fusion-ui-on-vm) section for more detail.
+
 * See our [Troubleshooting](../troubleshooting/general_troubleshooting.md) guide for help.
 
-_Contact [WANdisco](https://wandisco.com/contact) for further information about Fusion and what it can offer you._
+* See the [shutdown and start up](../operation/hdp_sandbox_fusion_stop_start.md) guide for when you wish to safely shutdown or start back up the environment.
+
+## Reference architecture
+
+![Architecture: HDP Sandbox to ADLS Gen2](/wandisco-documentation/img/arch_hdp_sandbox_adlsg2.jpg)
+
+1. If a HDFS write request is on a path that matches a HCFS rule, the Fusion Server in the HDP zone will coordinate with the Fusion Server in the ADLS Gen2 zone (read requests are passed through to HDFS).
+1. HDFS writes/changes are then read by the Fusion IHC in the HDP zone, and replicated to the Fusion Server in the ADLS Gen2 zone.
+1. The Fusion Server in the ADLS Gen2 zone will transform the HDFS data to equivalent ADLS Gen2 storage changes.

@@ -20,16 +20,16 @@ module.exports = {
       },
       links: [
         {
-          to: "docs/why-fusion/benefits",
-          label: "Why Fusion?",
+          to: "docs/product-concepts/benefits",
+          label: "Product Concepts",
           position: "right",
         },
         {
-          to: "docs/quickstarts/installation/quickstart-config",
-          label: "Quickstarts",
+          to: "docs/quickstarts/preparation/get-started",
+          label: "Guides",
           position: "right",
         },
-        { to: "docs/docs/doc1", label: "Docs", position: "right" },
+      //  { to: "docs/docs/doc1", label: "Docs", position: "right" },
         { to: "docs/glossary/a", label: "Glossary", position: "right" },
         //  {doc: 'api/api', label: 'API', position: 'right'},
       //  { to: "docs/help/need_help", label: "Help", position: "right" },
@@ -47,7 +47,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "docs/quickstarts/installation/quickstart-config",
+              to: "docs/quickstarts/preparation/get-started",
             },
             {
               label: "Product User Guides",

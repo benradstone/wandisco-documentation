@@ -20,7 +20,7 @@ const features = [
   {
     title: "Docker",
     imageUrl: "img/docker.png",
-    description: "Get up and running in minutes with Fusion & Docker.",
+    description: "Get up and running in minutes with LiveData Plane & Docker.",
   },
   {
     title: "OneUI",
@@ -59,7 +59,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx("button button--outline button--secondary button--lg")}
-              to={useBaseUrl("docs/quickstarts/installation/quickstart-config")}
+              to={useBaseUrl("docs/quickstarts/preparation/get-started")}
             >
               Get Started
             </Link>

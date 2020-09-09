@@ -1,7 +1,7 @@
 ---
 id: cdh_sandbox_fusion_stop_start
-title: Shut down or start up CDH Sandbox and WANdisco Fusion
-sidebar_label: Stop/Start CDH Sandbox & WANdisco Fusion
+title: Shut down or start up CDH Sandbox and LiveData Plane
+sidebar_label: Stop/Start CDH Sandbox & LiveData Plane
 ---
 
 ## Shutting down
@@ -12,7 +12,7 @@ The steps should be carried out prior to shutting down the Docker host itself.
 
 Log in to the Cloudera UI, and stop all services.
 
-`http://<docker_IP_address>:7180`
+`http://<dockerhost_IP_address>:7180`
 
 Username: `admin`
 Password: `admin`

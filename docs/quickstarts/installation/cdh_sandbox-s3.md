@@ -1,25 +1,25 @@
 ---
-id: cdh_sandbox-s3_ld
-title: Cloudera (CDH) Sandbox to AWS S3 with LiveData
-sidebar_label: CDH Sandbox to AWS S3 with LiveData
+id: cdh_sandbox-s3
+title: Cloudera (CDH) Sandbox to AWS S3
+sidebar_label: CDH Sandbox to AWS S3
 ---
 
-Use this quickstart if you want to configure Fusion to replicate from a non-kerberized Cloudera (CDH) Sandbox to an AWS S3 bucket.
+Use this quickstart to configure LiveData Plane to replicate from a non-kerberized Cloudera (CDH) Sandbox to an AWS S3 bucket.
 
 What this guide will cover:
 
-- Installing WANdisco Fusion and a CDH Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
-- Integrating WANdisco Fusion with AWS S3.
-- Live replication of sample data.
+- Installing LiveData Plane and a CDH Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
+- Integrating LiveData Plane with AWS S3.
 
 If you would like to try something different with the CDH Sandbox, see:
 
-* [Migration of data to AWS S3](./cdh_sandbox-s3_lm.md)
+* [CDH Sandbox to ADLS Gen2](./cdh_sandbox-adlsg2.md)
 
 ## Prerequisites
 
-|For info on how to create a suitable VM with all services installed, see our [AWS VM creation](../preparation/aws_vm_creation.md) guide. See our [VM Preparation](../preparation/vm_prep.md) guide for how to install the services only.|
-|---|
+:::info
+For more information about to create a suitable VM with all services installed, see our [AWS VM creation](../preparation/aws_vm_creation.md) guide. See our [VM Preparation](../preparation/vm_prep.md) guide for how to install the services only.|
+:::
 
 To complete this install, you will need:
 
@@ -27,7 +27,7 @@ To complete this install, you will need:
   * Only [regions that support Signature Version 2](https://docs.aws.amazon.com/general/latest/gr/signature-version-2.html) are currently supported.
 
 * Linux Virtual Machine (e.g. AWS EC2 instance).
-  * Minimum size recommendation = **4 vcpus, 32 GiB memory** (e.g. [r5.xlarge](https://aws.amazon.com/ec2/instance-types/)).
+  * Minimum size recommendation = **8 vcpus, 32 GiB memory** (e.g. [m5.2xlarge](https://aws.amazon.com/ec2/instance-types/)).
   * A minimum of 24GB available storage for the `/var/lib/docker` directory.
 
 * The following packages must be installed on the VM:
@@ -50,9 +50,9 @@ _These instructions have been tested on Ubuntu LTS._
 
 Log in to your VM prior to starting these steps.
 
-### Setup Fusion
+### Setup LiveData Plane
 
-1. Clone the Fusion docker repository:
+1. Clone the LiveData Plane docker repository:
 
    `git clone https://github.com/WANdisco/cdh-s3.git`
 
@@ -74,7 +74,7 @@ The CDH Sandbox services can take up to 5-10 minutes to start. To check that the
 
 1. Log in to Cloudera via a web browser.
 
-   `http://<docker_IP_address>:7180`
+   `http://<dockerhost_IP_address>:7180`
 
    Username: `admin`
    Password: `admin`
@@ -85,9 +85,9 @@ The CDH Sandbox services can take up to 5-10 minutes to start. To check that the
 
 ### Configure the S3 storage
 
-1. Log in to Fusion via a web browser.
+1. Log in to the UI via a web browser.
 
-   `http://<docker_IP_address>:8081`
+   `http://<dockerhost_IP_address>:8081`
 
    Enter your email address and choose a password you will remember.
 
@@ -95,39 +95,15 @@ The CDH Sandbox services can take up to 5-10 minutes to start. To check that the
 
 1. Click **Apply Configuration** and wait for this to complete.
 
-## Replication
+## Next steps
 
-Follow the steps below to demonstrate live replication of HCFS data from the CDH Sandbox to your AWS S3 bucket.
+### Migration
 
-### Create replication rule
+Follow our [CDH Sandbox LiveMigrator testing guide](../testing/test-cdh-sandbox-livemigrator.md) to perform a sample data migration.
 
-On the dashboard, create a **HCFS** rule with the following parameters:
+### Replication
 
-* Rule Name = `replicate`
-* Path for all storages = `/testdir`
-* Default exclusions
-* Preserve HCFS Block Size = *False*
-
-### Test HCFS replication
-
-1. Log in to **Hue** via a web browser.
-
-   `http://<docker_IP_address>:8889`
-
-   Username: `hdfs`
-   Password: `hdfs`
-
-1. Go to **Menu** -> **Files**.
-
-1. Move to `/testdir` path and **Upload** any file from your host machine.
-
-1. Check that the file you uploaded is now located in your `/testdir` directory in your AWS S3 bucket.
-
-#### Test large data sets (optional)
-
-If you want to replicate larger amounts of data, see our [CDH Sandbox testing](../testing/test_cdh_sandbox.md) guide.
-
-_You have now set up live replication from your CDH Sandbox to your AWS S3 bucket. Contact [WANdisco](https://wandisco.com/contact) for further information about Fusion and what it can offer you._
+Follow our [CDH Sandbox LiveData testing guide](../testing/test-cdh-sandbox-livedata.md) to perform live replication of data.
 
 ## Troubleshooting
 

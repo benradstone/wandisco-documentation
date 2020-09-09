@@ -1,7 +1,7 @@
 ---
 id: hdp_sandbox_fusion_stop_start
-title: Shut down or start up HDP Sandbox and WANdisco Fusion
-sidebar_label: Stop/Start HDP Sandbox & WANdisco Fusion
+title: Shut down or start up HDP Sandbox and LiveData Plane
+sidebar_label: Stop/Start HDP Sandbox & LiveData Plane
 ---
 
 ## Shutting down
@@ -12,7 +12,7 @@ The steps should be carried out prior to shutting down the Docker host itself.
 
 Log in to the Ambari UI, and stop all services.
 
-`http://<docker_IP_address>:8080`
+`http://<dockerhost_IP_address>:8080`
 
 Username: `admin`
 Password: `admin`

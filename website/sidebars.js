@@ -37,7 +37,7 @@ module.exports = {
     "Preparation": [
         "quickstarts/preparation/get-started",
         {
-            "Dockerized Fusion": [
+            "Dockerized LiveData Plane": [
                 "quickstarts/preparation/dockerized-fusion-requirements",
                 "quickstarts/preparation/aws_vm_creation",
                 "quickstarts/preparation/azure_vm_creation",
@@ -50,7 +50,7 @@ module.exports = {
     ],
     "Installation": [
         {
-            "Dockerized Fusion": [
+            "Dockerized LiveData Plane": [
                 "quickstarts/installation/installation-quickstarts",
                 "quickstarts/installation/adlsg1-adlsg2",
                 "quickstarts/installation/s3-adlsg2_bi",
@@ -69,7 +69,7 @@ module.exports = {
     ],
     "Testing": [
         {
-            "Dockerized Fusion": [
+            "Dockerized LiveData Plane": [
                 "quickstarts/testing/test_adlsg1",
                 "quickstarts/testing/test_adlsg2",
                 "quickstarts/testing/test_s3",
@@ -100,7 +100,7 @@ module.exports = {
         "quickstarts/operation/license_upgrade",
         "quickstarts/operation/advanced-settings",
         {
-            "Dockerized Fusion only": [
+            "Dockerized LiveData Plane only": [
                 "quickstarts/operation/cdh_sandbox_fusion_stop_start",
                 "quickstarts/operation/hdp_sandbox_fusion_stop_start",
             ]
@@ -108,7 +108,7 @@ module.exports = {
     ],
     "Troubleshooting": [
         {
-            "Dockerized Fusion": [
+            "Dockerized LiveData Plane": [
                 "quickstarts/troubleshooting/general_troubleshooting",
                 "quickstarts/troubleshooting/cdh_sandbox_troubleshooting",
                 "quickstarts/troubleshooting/hdp_sandbox_troubleshooting",

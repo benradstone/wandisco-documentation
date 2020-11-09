@@ -4,7 +4,7 @@ title: AWS S3 and Azure Data Lake Storage Gen2
 sidebar_label: AWS S3 & ADLS Gen2
 ---
 
-Use this quickstart to configure LiveData Plane to migrate data from an AWS S3 bucket to an ADLS Gen2 container, or from an ADLS Gen2 container to an AWS S3 bucket. 
+Use this quickstart to configure LiveData Plane to migrate data from an AWS S3 bucket to an ADLS Gen2 container, or from an ADLS Gen2 container to an AWS S3 bucket.
 The set up is the same for either scenario, just choose the direction when starting your migration.
 
 What this guide will cover:
@@ -106,9 +106,9 @@ Log in to your VM prior to starting these steps.
 
 ## Next steps
 
-* Follow our [S3 testing guide](../testing/test-s3.md) to perform a sample data migration using the S3 storage as the [source](../../glossary/s.md#source).
+* Follow our [S3 testing guide](../testing/test_s3.md) to perform a sample data migration using the S3 storage as the [source](../../glossary/s.md#source).
 
-* Follow our [ADLS Gen2 testing guide](../testing/test-adlsg2.md) to perform a sample data migration using the ADLS Gen2 storage as the [source](../../glossary/s.md#source).
+* Follow our [ADLS Gen2 testing guide](../testing/test_adlsg2.md) to perform a sample data migration using the ADLS Gen2 storage as the [source](../../glossary/s.md#source).
 
 ## Troubleshooting
 

@@ -8,8 +8,8 @@ Use this quickstart to configure LiveData Plane to replicate from ADLS Gen1 to A
 
 What this guide will cover:
 
-- Installing LiveData Plane using the [docker-compose](https://docs.docker.com/compose/) tool.
-- Integrating LiveData Plane with ADLS Gen1 and ADLS Gen2 storage.
+* Installing LiveData Plane using the [docker-compose](https://docs.docker.com/compose/) tool.
+* Integrating LiveData Plane with ADLS Gen1 and ADLS Gen2 storage.
 
 ## Prerequisites
 
@@ -112,7 +112,7 @@ Follow our [ADLS Gen1 testing guide](../testing/test-adlsg1.md) to perform a sam
 
 ## Reference architecture
 
-![Architecture: ADLS Gen1 to ADLS Gen2](/wandisco-documentation/img/arch_adlsg1_adlsg2.jpg)
+![Architecture: ADLS Gen1 to ADLS Gen2](/img/arch_adlsg1_adlsg2.jpg)
 
 1. When initiating a migration, LiveMigrator will scan the ADLS Gen1 storage.
 1. Any new files or differences are read by the IHC Server in the ADLS Gen1 zone, and replicated to the LiveData Plane Server in the ADLS Gen2 zone.

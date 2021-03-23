@@ -10,8 +10,8 @@ This uses the [WANdisco LiveAnalytics](https://wandisco.com/products/live-analyt
 
 What this guide will cover:
 
-- Installing LiveData Plane and a HDP Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
-- Integrating LiveData Plane with Azure Databricks.
+* Installing LiveData Plane and a HDP Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
+* Integrating LiveData Plane with Azure Databricks.
 
 If you would like to try something different with the HDP Sandbox, see:
 
@@ -131,7 +131,7 @@ Follow our [HDP Sandbox LiveAnalytics testing guide](../testing/test-hdp-sandbox
 
 ## Reference architecture
 
-![Architecture: HDP Sandbox to Azure Databricks with LiveAnalytics](/wandisco-documentation/img/arch_hdp_sandbox_az_databricks_lan.jpg)
+![Architecture: HDP Sandbox to Azure Databricks with LiveAnalytics](/img/arch_hdp_sandbox_az_databricks_lan.jpg)
 
 1. Live Hive Proxy will intercept and co-ordinate the Hive request with the LiveData Plane Server on the HDP zone.
 1. If the request is on a database/table that matches a Hive rule, the LiveData Plane Server in the HDP zone will coordinate with the LiveData Plane Server in the ADLS Gen2 zone (read requests are passed through to Hive). Metadata is replicated from the HDP zone to the ADLS Gen2 zone.

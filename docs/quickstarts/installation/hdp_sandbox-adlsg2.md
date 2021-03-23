@@ -8,8 +8,8 @@ Use this quickstart to configure LiveData Plane to replicate from a non-kerberiz
 
 What this guide will cover:
 
-- Installing LiveData Plane and a HDP Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
-- Integrating LiveData Plane with ADLS Gen2 storage.
+* Installing LiveData Plane and a HDP Sandbox using the [docker-compose](https://docs.docker.com/compose/) tool.
+* Integrating LiveData Plane with ADLS Gen2 storage.
 
 If you would like to try something different with the HDP Sandbox, see:
 
@@ -122,7 +122,7 @@ Follow our [HDP Sandbox LiveData testing guide](../testing/test-hdp-sandbox-live
 
 ## Reference architecture
 
-![Architecture: HDP Sandbox to ADLS Gen2](/wandisco-documentation/img/arch_hdp_sandbox_adlsg2.jpg)
+![Architecture: HDP Sandbox to ADLS Gen2](/img/arch_hdp_sandbox_adlsg2.jpg)
 
 1. If a HDFS write request is on a path that matches a HCFS rule, the LiveData Plane Server in the HDP zone will coordinate with the LiveData Plane Server in the ADLS Gen2 zone (read requests are passed through to HDFS).
 1. HDFS writes/changes are then read by the IHC Server in the HDP zone, and replicated to the LiveData Plane Server in the ADLS Gen2 zone.

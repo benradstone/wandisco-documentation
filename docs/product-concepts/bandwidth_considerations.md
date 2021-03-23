@@ -6,7 +6,7 @@ sidebar_label: Bandwidth Considerations
 
 The graph and table below illustrate network bandwidth capacities and the impact they have on data migration.
 
-![Data migration - illustration of bandwidth measurement](/wandisco-documentation/img/network_bandwidth.jpg)
+![Data migration - illustration of bandwidth measurement](/img/network_bandwidth.jpg)
 
 |Data size / bandwidth|10 Mbps|100 Mbps|500 Mbps|1 Gbps|10 Gbps|
 |---|---|---|---|---|---|
@@ -26,6 +26,6 @@ If your data set contains mainly small files, this will impact the time it will 
 
 ## Round-trip time (RTT)
 
-The RTT between your [source](../../glossary/s.md#source) and [target](../../glossary/t.md#target) environments can prevent you from taking advantage of higher bandwidth levels (if available to you).
+The RTT between your [source](../glossary/s.md#source) and [target](../glossary/t.md#target) environments can prevent you from taking advantage of higher bandwidth levels (if available to you).
 
 For instance, when using a 1Gbps link, the difference between 10ms and 20ms is negligible. When using a 10Gbps link, the difference between 10ms and 20ms can cut your migration time in half.

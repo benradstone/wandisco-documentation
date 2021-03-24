@@ -24,9 +24,9 @@ module.exports = {
   themeConfig: {
     sidebarCollapsible: true,
     navbar: {
-      title: "WANdisco Fusion",
+      title: "WANdisco LiveData Plane",
       logo: {
-        alt: "WANdisco Fusion Logo",
+        alt: "WANdisco LiveData Plane Logo",
         src: "img/favicon.png",
       },
       items: [
@@ -47,7 +47,7 @@ module.exports = {
       ],
     },
     algolia: {
-      apiKey: "456e573413aa88e9ec072a585bec45683",
+      apiKey: "56e573413aa88e9ec072a585bec45683",
       indexName: "wandisco",
 
       //contextualSearch: true,

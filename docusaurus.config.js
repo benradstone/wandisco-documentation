@@ -31,19 +31,20 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/product-concepts/benefits",
-          label: "Product Concepts",
-          position: "right",
-        },
-        {
-          to: "docs/quickstarts/preparation/get-started",
+          to: "docs/preparation/get-started",
           label: "Guides",
           position: "right",
         },
-      //  { to: "docs/docs/doc1", label: "Docs", position: "right" },
-        { to: "docs/glossary/a", label: "Glossary", position: "right" },
-        //  {doc: 'api/api', label: 'API', position: 'right'},
-      //  { to: "docs/help/need_help", label: "Help", position: "right" },
+        {
+          to: "docs/quickstarts/preparation/get-started-trial",
+          label: "Try LiveData Plane",
+          position: "right",
+        },
+        {
+          to: "docs/help/need_help",
+          label: "Help",
+          position: "right"
+        },
       ],
     },
     algolia: {
@@ -64,7 +65,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "docs/quickstarts/preparation/get-started",
+              to: "docs/preparation/get-started",
             },
             {
               label: "Product User Guides",

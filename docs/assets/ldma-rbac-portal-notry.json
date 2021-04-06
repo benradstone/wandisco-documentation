@@ -1,0 +1,33 @@
+{
+    "properties": {
+        "roleName": "LDMA Manager Role",
+        "description": "Includes all permissions for Managing and creating LDMA resources.",
+        "assignableScopes": [
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Wandisco.Fusion/migrators/delete",
+                    "Wandisco.Fusion/migrators/generateUpgrade/action",
+                    "Wandisco.Fusion/migrators/read",
+                    "Wandisco.Fusion/migrators/updateDownloadLocation/action",
+                    "Wandisco.Fusion/migrators/write",
+                    "Wandisco.Fusion/migrators/liveDataMigrations/delete",
+                    "Wandisco.Fusion/migrators/liveDataMigrations/read",
+                    "Wandisco.Fusion/migrators/liveDataMigrations/start/action",
+                    "Wandisco.Fusion/migrators/liveDataMigrations/stop/action",
+                    "Wandisco.Fusion/migrators/liveDataMigrations/write",
+                    "Wandisco.Fusion/migrators/targets/delete",
+                    "Wandisco.Fusion/migrators/targets/read",
+                    "Wandisco.Fusion/migrators/targets/write",
+                    "Wandisco.Fusion/locations/operationStatuses/read",
+                    "Wandisco.Fusion/locations/operationStatuses/write",
+                    "Wandisco.Fusion/operations/read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}

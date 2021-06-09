@@ -1,7 +1,7 @@
 ---
 id: style-guide
 title: How to Contribute to Documentation
-sidebar_label:
+sidebar_label: n/a
 ---
 
 The docs are written in Markdown, if you're not familiar with this start here:

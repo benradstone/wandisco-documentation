@@ -46,6 +46,7 @@ We use US English.
 Therefore, general guidelines for use of language are:
 
 * Keep it short and simple - use short words, short sentences, short paragraphs, etc. Write in the simplest form to avoid confusing users.
+* Use clear and relevant language, not sales or marketing language. People reading the guides have either already decided to use the product or only care about how it works. The technical documentation is a tool, like Google, which the customer only wants a clear answer from. Avoid emotive language and don't try to impress the reader.
 * Use [active voice](https://www.grammarly.com/blog/active-vs-passive-voice/) - make the content user-centric. Address the user directly. Write as if the user has asked you how to do something.
 * Use present tense - unless an action will happen in the future.
 * Use terms and phrases consistently - technical writing is the opposite of creative writing in that you should repeat words rather than try to think of different words that mean the same thing.
